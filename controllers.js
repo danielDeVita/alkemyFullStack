@@ -1,6 +1,6 @@
 const controllers = {
-    home: (req, res)=>{
-        res.send("hello w")
+    home: (req, res) => {
+        res.render("home")
     }
 };
 
