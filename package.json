@@ -1,0 +1,22 @@
+{
+  "name": "alkemyfullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielDeVita/alkemyFullStack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielDeVita/alkemyFullStack/issues"
+  },
+  "homepage": "https://github.com/danielDeVita/alkemyFullStack#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
