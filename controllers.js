@@ -32,6 +32,8 @@ const controllers = {
             concepto: req.body.concepto,
             monto: req.body.monto,
             fecha: req.body.fecha,
+        }, {
+            where: {id: req.params.id}
         })
         .then(()=>{
             return res.redirect("/")
