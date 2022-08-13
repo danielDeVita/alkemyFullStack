@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>App Presupuesto Personal</title>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Alkemy Full Stack Challenge</h1>
+
+        <form action="/" method="POST">
+
+            <label for="concepto" class="input">Concepto
+                <input type="text" id="concepto" name="concepto" class="input" placeholder="<%=entry.concepto%>">
+            </label>
+
+            <label for="monto" class="input">Monto
+                <input type="number" id="monto" name="monto" class="input" placeholder="<%=entry.monto%>">
+            </label>
+
+            <label for="fecha" class="input">Fecha
+                <input type="date" id="fecha" name="fecha" class="input" placeholder="<%=entry.fecha%>">
+            </label>
+
+            <input type="submit" class="button" value="Modificar" placeholder="">
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

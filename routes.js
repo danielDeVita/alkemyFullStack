@@ -3,6 +3,8 @@ const router = express.Router();
 const controllers = require("./controllers")
 
 router.get("/", controllers.home);
-router.post('/', controllers.formProcess)
+router.post('/', controllers.formProcess);
+router.get("/:id", controllers.editView);
+router.post("/:id", controllers.editProcess);
 
 module.exports = router
