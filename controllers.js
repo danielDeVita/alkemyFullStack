@@ -6,6 +6,7 @@ const controllers = {
             .then((totalData) => {
                 return res.render("home", { totalData })
             })
+            .catch(error => console.error(error));
     },
     formProcess: (req, res) => {
         db.alkemyFullStack.create({
@@ -17,6 +18,7 @@ const controllers = {
             .then(() => {
                 return res.redirect("/");
             })
+            .catch(error=>console.error(error));
     }
 };
 
