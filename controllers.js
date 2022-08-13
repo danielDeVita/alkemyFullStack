@@ -27,17 +27,17 @@ const controllers = {
             })
             .catch(error => console.error(error))
     },
-    editProcess: (req, res)=> {
+    editProcess: (req, res) => {
         db.alkemyFullStack.update({
             concepto: req.body.concepto,
             monto: req.body.monto,
             fecha: req.body.fecha,
         }, {
-            where: {id: req.params.id}
+            where: { id: req.params.id }
         })
-        .then(()=>{
-            return res.redirect("/")
-        })
+            .then(() => {
+                return res.redirect("/")
+            })
     }
 };
 

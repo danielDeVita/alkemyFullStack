@@ -5,6 +5,6 @@ const controllers = require("./controllers")
 router.get("/", controllers.home);
 router.post('/', controllers.formProcess);
 router.get("/:id", controllers.editView);
-router.post("/:id", controllers.editProcess);
+router.put("/:id", controllers.editProcess);
 
 module.exports = router
