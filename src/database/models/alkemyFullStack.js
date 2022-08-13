@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName : "alkemyFullStack",
-        timeStamps: false
+        timestamps: false
     };
 
     const alkemyFullStack = sequelize.define(alias, cols, config)
