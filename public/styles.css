@@ -35,6 +35,7 @@ h1, h2 {
     display: block;
     margin: auto;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     border: 1px red solid;
     max-width: 80%;
     padding: 0.5rem;
@@ -42,4 +43,15 @@ h1, h2 {
     cursor: pointer;
     background-color: bisque;
     border-radius: 8px;
+}
+
+.list {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+li {
+    margin: 0.5rem;
+    list-style-type: none;
+    border: 1px red solid;
 }

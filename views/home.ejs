@@ -40,13 +40,13 @@
 
         </form>
 
-        <h2>Listado de operaciones</h2>
+        <h2>Listado de operaciones:</h2>
 
-        <ul>
+        <ul class="list">
             <% for (let i=0; i < totalData.length; i++){ %>
                 <li>
                     <p>
-                        <%= totalData[i].concepto%> - <%=totalData[i].monto%> - <%=totalData[i].tipo%>
+                        <%= totalData[i].concepto%> - $ <%=totalData[i].monto%> - <%=totalData[i].tipo%>
                     </p>
                 </li>
                 <% } %>
