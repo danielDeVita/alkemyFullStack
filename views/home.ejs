@@ -31,14 +31,26 @@
 
             <label for="tipo" class="input">Tipo
                 <select name="tipo" id="tipo" class="input">
-                    <option value="1">Ingreso</option>
-                    <option value="2">Egreso</option>
+                    <option value="Ingreso">Ingreso</option>
+                    <option value="Egreso">Egreso</option>
                 </select>
             </label>
 
             <input type="submit" class="button" value="Enviar">
 
         </form>
+
+        <h2>Listado de operaciones</h2>
+
+        <ul>
+            <% for (let i=0; i < totalData.length; i++){ %>
+                <li>
+                    <p>
+                        <%= totalData[i].concepto%> - <%=totalData[i].monto%> - <%=totalData[i].tipo%>
+                    </p>
+                </li>
+                <% } %>
+        </ul>
 
     </main>
 

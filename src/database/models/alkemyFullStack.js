@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATE,
         },
         tipo: {
-            type: dataTypes.INTEGER //1 = ingreso; 2 = egreso
+            type: dataTypes.STRING(15) 
         }
     };
 

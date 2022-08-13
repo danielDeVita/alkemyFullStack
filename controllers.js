@@ -2,20 +2,21 @@ const db = require("./src/database/models")
 
 const controllers = {
     home: (req, res) => {
-        res.render("home")
+        db.alkemyFullStack.findAll()
+            .then((totalData) => {
+                return res.render("home", { totalData })
+            })
     },
-    formProcess: (req, res)=>{
-        //res.json(req.body)
-        //console.log(req.body)
+    formProcess: (req, res) => {
         db.alkemyFullStack.create({
             concepto: req.body.concepto,
             monto: req.body.monto,
             fecha: req.body.fecha,
             tipo: req.body.tipo
         })
-        .then (()=>{
-            return res.redirect("/");
-        })
+            .then(() => {
+                return res.redirect("/");
+            })
     }
 };
 
