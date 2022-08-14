@@ -23,7 +23,10 @@ const controllers = {
     editView: (req, res) => {
         db.alkemyFullStack.findByPk(req.params.id)
             .then((entry) => {
-                return res.render("edit", { entry })
+                if (!entry) {
+                    res.send("404 not found")
+                } else
+                    return res.render("edit", { entry })
             })
             .catch(error => console.error(error))
     },
