@@ -1,4 +1,4 @@
-const db = require("./src/database/models")
+const db = require("./src/database/models");
 
 const controllers = {
     home: (req, res) => {
