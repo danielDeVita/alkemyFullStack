@@ -2,7 +2,10 @@ const db = require("./src/database/models");
 
 const controllers = {
     home: (req, res) => {
-        db.alkemyFullStack.findAll()
+        db.alkemyFullStack.findAll({
+            order:[["id", "DESC"]],
+            limit: 10,
+        })
             .then((totalData) => {
                 return res.render("home", { totalData })
             })
