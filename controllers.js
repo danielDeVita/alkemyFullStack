@@ -3,7 +3,7 @@ const db = require("./src/database/models");
 const controllers = {
     home: (req, res) => {
         db.alkemyFullStack.findAll({
-            order:[["id", "DESC"]],
+            order: [["id", "DESC"]],
             limit: 10,
         })
             .then((totalData) => {
