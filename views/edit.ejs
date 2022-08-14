@@ -18,15 +18,15 @@
         <form action="/<%=entry.id%>?_method=PUT" method="POST">
 
             <label for="concepto" class="input">Concepto
-                <input type="text" id="concepto" name="concepto" class="input" placeholder="<%=entry.concepto%>">
+                <input type="text" id="concepto" name="concepto" class="input" value="<%=entry.concepto%>">
             </label>
 
             <label for="monto" class="input">Monto
-                <input type="number" id="monto" name="monto" class="input" placeholder="<%=entry.monto%>">
+                <input type="number" id="monto" name="monto" class="input" value="<%=entry.monto%>">
             </label>
 
             <label for="fecha" class="input">Fecha
-                <input type="date" id="fecha" name="fecha" class="input" placeholder="<%=entry.fecha%>">
+                <input type="date" id="fecha" name="fecha" class="input" value="<%=entry.fecha%>">
             </label>
 
             <input type="submit" class="button" value="Modificar" placeholder="">
