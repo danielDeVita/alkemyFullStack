@@ -6,5 +6,6 @@ router.get("/", controllers.home);
 router.post('/', controllers.formProcess);
 router.get("/:id", controllers.editView);
 router.put("/:id", controllers.editProcess);
+router.delete("/:id", controllers.delete);
 
 module.exports = router

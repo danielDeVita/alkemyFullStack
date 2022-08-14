@@ -38,6 +38,15 @@ const controllers = {
             .then(() => {
                 return res.redirect("/")
             })
+    },
+    delete: (req, res) => {
+        db.alkemyFullStack.destroy({
+            where: { id: req.params.id }
+        })
+            .then(() => {
+                return res.redirect("/")
+            })
+            .catch(error => console.error(error))
     }
 };
 
