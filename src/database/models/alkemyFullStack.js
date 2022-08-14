@@ -17,12 +17,12 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATE,
         },
         tipo: {
-            type: dataTypes.STRING(15) 
+            type: dataTypes.STRING(15)
         }
     };
 
     let config = {
-        tableName : "alkemyFullStack",
+        tableName: "alkemyFullStack",
         timestamps: false
     };
 
