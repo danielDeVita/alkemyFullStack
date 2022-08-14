@@ -47,6 +47,10 @@ const controllers = {
                 return res.redirect("/")
             })
             .catch(error => console.error(error))
+    },
+    api: (req, res) => {
+        db.alkemyFullStack.findAll()
+            .then(entries => res.status(200).json(entries))
     }
 };
 
