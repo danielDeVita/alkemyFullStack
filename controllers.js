@@ -7,7 +7,24 @@ const controllers = {
             limit: 10,
         })
             .then((totalData) => {
-                return res.render("home", { totalData })
+
+                let ingresos = [];
+                let egresos = [];
+
+                for (let i = 0; i < totalData.length; i++) {
+                    if (totalData[i].tipo == "Ingreso") {
+                        ingresos.push(totalData[i].monto)
+                    } else {
+                        egresos.push(totalData[i].monto)
+                    }
+                }
+
+                let totalIngresos = ingresos.reduce((accum, i) => accum + i, 0);
+                let totalEgresos = egresos.reduce((accum, i) => accum + i, 0)
+
+                let balance = totalIngresos - totalEgresos;
+
+                return res.render("home", { totalData, balance })
             })
             .catch(error => console.error(error));
     },
