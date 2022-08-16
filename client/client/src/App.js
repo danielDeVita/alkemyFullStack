@@ -20,11 +20,11 @@ function App() {
   return (
     <div className="App">
       <ul>
-      {
-        list.map(item =>(
-          <li key={item.id}>Concepto: {item.concepto} - Monto: ${item.monto} - Fecha: {item.fecha} - Tipo: {item.tipo}</li>
-        ))
-      }
+        {
+          list.map(item => (
+            <li key={item.id}>Concepto: {item.concepto} - Monto: ${item.monto} - Fecha: {item.fecha} - Tipo: {item.tipo}</li>
+          ))
+        }
       </ul>
     </div>
   );
