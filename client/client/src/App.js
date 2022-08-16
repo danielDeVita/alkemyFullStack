@@ -1,4 +1,4 @@
-/* import './App.css'; */
+import './App.css';
 import { useState, useEffect } from "react";
 
 function App() {
@@ -18,15 +18,32 @@ function App() {
   )
 
   return (
-    <div className="App">
-      <ul>
-        {
-          list.map(item => (
-            <li key={item.id}>Concepto: {item.concepto} - Monto: ${item.monto} - Fecha: {item.fecha} - Tipo: {item.tipo}</li>
-          ))
-        }
-      </ul>
-    </div>
+
+    <tbody>
+
+      <tr>
+        <th>Concepto</th>
+        <th>Monto</th>
+        <th>Fecha</th>
+        <th>Tipo</th>
+      </tr>
+
+      {
+        list.map(item => (
+
+          /*  <li key={item.id}>Concepto: {item.concepto} - Monto: ${item.monto} - Fecha: {item.fecha} - Tipo: {item.tipo}</li> */
+
+          <tr key={item.id}>
+            <td>{item.concepto}</td>
+            <td>{item.monto}</td>
+            <td>{item.fecha}</td>
+            <td>{item.tipo}</td>
+          </tr>
+
+        ))
+      }
+    </tbody>
+
   );
 }
 
